@@ -1,0 +1,4 @@
+I can display ANY data on the live world map with GeoJSON data format and Leaflet·JS.
+
+Please cast an eye on my map of the last day earthquakes: 
+https://maps.nakigoe.org
