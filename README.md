@@ -1,6 +1,6 @@
 <kbd style="width: 2em; height: 2em;"><a href="#en">ENGLISH</a></kbd> | <kbd><a href="#ru">РУССКИЙ</a></kbd> | <kbd>[日本語](#ja)</kbd>
 
-<h1 name="en" id="en">Automatically Connect with Your Friend's Friends</h1>
+<h1 name="en" id="en">Facebook: Automatically Connect with Your Friend's Friends</h1>
 
 <b>Pick a friend and auto-send friend requests with customized messages, including personal names, to all of his or her connections.</b>
 
@@ -11,6 +11,8 @@
   •  Your Facebook login `username`
   
   •  Your Facebook password `password`
+  
+  •  The link to Your friend's page `friend_link`
     
 ### Install Python:
 
