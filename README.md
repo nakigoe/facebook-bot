@@ -43,6 +43,8 @@
   •  Facebookのログイン名 `username`
   
   •  Facebookのパスワード `password`
+
+  •  ご友人のページへのリンク `friend_link`
   
 ### Python をインストールなさってください：
 
@@ -73,6 +75,8 @@
   •  имя пользователя `username`
   
   •  пароль `password`
+
+  •  сноску на страницу Вашего друга `friend_link`
    
 ### Установите Python:
 
