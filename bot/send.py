@@ -174,14 +174,35 @@ def scroll_to_bottom():
             reached_page_end = True
         else:
             last_height = new_height
-                
+
+def send_friend_request(driver, anchor_element):
+    #move to the element and wait for a popup to appear
+    action.move_to_element(anchor_element).perform()
+    time.sleep(3)   
+    
+    try:    
+        add_friend = driver.find_element(By.XPATH, '//div[@aria-label="Add friend"]')
+        action.move_to_element(add_friend).perform()
+        action.click(add_friend).perform()
+        time.sleep(2)
+        try:
+            ok_button = driver.find_element(By.XPATH, '//div[@aria-label="OK"]')
+            driver.execute_script("arguments[0].click();", ok_button)
+            time.sleep(2)
+        except:
+            pass
+    except:
+        pass
+       
 def main():
     login()
     time.sleep(10)
     if "?id=" in friend_link:
         driver.get(friend_link + "&sk=friends")
+    elif friend_link[-1]=="/": # check if there is a slash '/' at the end of the link
+        driver.get(friend_link + "friends") 
     else:
-        driver.get(friend_link + "friends") # assumes there is a slash '/' at the end of the link
+        driver.get(friend_link + "/friends") 
     time.sleep(10)
     
     show_page = wait.until(EC.presence_of_element_located((By.XPATH, '//div')))
@@ -197,8 +218,10 @@ def main():
     for friend_element in friend_elements:
         try:
             check_and_send_message(driver, friend_element)
+            # if You hit the messages limit, comment out the function above and use the one below, to send friend requests without a message:
+            # send_friend_request(driver, friend_element)
         except:
-            continue    
+            continue
 
     # Close the only tab, will also close the browser.
     os.system("cls") #clear screen from unnecessary logs since the operation has completed successfully
