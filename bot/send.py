@@ -110,10 +110,17 @@ def send_a_message(driver, anchor_element):
     action.click(send_button).perform()
     time.sleep(3)
 
+    sent_or_could_not_send = wait.until(EC.presence_of_element_located((By.XPATH, '//div[@role="gridcell"]//span[@role="none"]//span[@dir="auto"]'))).get_attribute('innerHTML')
+    
     close_chat_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@aria-label="Close chat"]')))
     action.move_to_element(close_chat_button).perform()
     action.click(close_chat_button).perform()
     time.sleep(3)
+    
+    if "Sent" in sent_or_could_not_send:
+        return 0
+    else:
+        return 1
 
 def check_and_send_message(driver, friend_list_page_element):
     facebook_page_url = friend_list_page_element.get_attribute('href')
@@ -129,14 +136,14 @@ def check_and_send_message(driver, friend_list_page_element):
         if date_sent_str:
             date_sent = datetime.strptime(date_sent_str, '%Y-%m-%d')
             if datetime.now() - date_sent > timedelta(days=365):
-                send_a_message(driver, friend_list_page_element)
-                update_date_sent(facebook_page_url)
+                if send_a_message(driver, friend_list_page_element) == 0: #if there is a word 'Sent' in the return message
+                    update_date_sent(facebook_page_url)
         else:
-            send_a_message(driver, friend_list_page_element)
-            update_date_sent(facebook_page_url)
+            if send_a_message(driver, friend_list_page_element) == 0: #if there is a word 'Sent' in the return message
+                update_date_sent(facebook_page_url)
     else:
-        send_a_message(driver, friend_list_page_element)
-        insert_user(facebook_page_url)
+        if send_a_message(driver, friend_list_page_element) == 0: #if there is a word 'Sent' in the return message
+            insert_user(facebook_page_url)
 
     conn.close()
 
