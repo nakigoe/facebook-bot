@@ -32,6 +32,14 @@
 
 <hr>
 
+<p style="margin: 0 auto" align="center">© <a href="https://nakigoe.org" target="_blank">NAKIGOE.ORG</a></p> 
+
+<p style="margin: 0 auto" align="center">All rights reserved and no permissions are granted.</p>
+
+<p style="margin: 0 auto" align="center">Please add stars the repositories!</p>
+
+<hr>
+
 <h1 name="ja" id="ja">Facebook：友達の友達と自動的につながる</h1>
 
 <b>友達を選び、彼または彼女のすべてのコネクションに、個人名を含めたカスタマイズメッセージで友達リクエストを自動送信します。</b>
@@ -40,9 +48,9 @@
 
 ### 変更する:
 
-  •  Facebookのログイン名 `username`
+  •  Facebook のログイン名 `username`
   
-  •  Facebookのパスワード `password`
+  •  Facebook のパスワード `password`
 
   •  ご友人のページへのリンク `friend_link`
   
@@ -61,6 +69,14 @@
 ### すべての方々へ友達リクエストとメッセージをお送りくださいませ！
 
   •  `start.bat` をダブルクリックをなさってください。
+
+<hr>
+
+<p style="margin: 0 auto" align="center">© <a href="https://nakigoe.org/ja" target="_blank">NAKIGOE.ORG</a></p> 
+
+<p style="margin: 0 auto" align="center">全ての権利を保有し、許可は一切与えられません。</p>
+
+<p style="margin: 0 auto" align="center">リポジトリに星を付けてください！</p>
 
 <hr>
 
@@ -93,6 +109,16 @@
 ### Запускайте!
 
   •  двойной щелчок мыши по `start.bat`
+
+<hr>
+
+<p style="margin: 0 auto" align="center">© <a href="https://nakigoe.org/ru" target="_blank">NAKIGOE.ORG</a></p> 
+
+<p style="margin: 0 auto" align="center">Все права сохраняются и никаких разрешений не предоставляется.</p>
+
+<p style="margin: 0 auto" align="center">Ставьте звёзды на репозитории!</p>
+
+<hr>
 
 <h2 style="margin: 0 auto" align="center">Place all stars on GitHub and share!!!</h2>
 <br>
